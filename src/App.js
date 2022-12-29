@@ -24,25 +24,25 @@ const App = (props) => {
           <Routes>
             <Route path='/News' element={
               <News
-                data__One_New={props.data__One_New}
+                data__One_New={props.state.News_page.data__One_New}
               ></News>
             }></Route>
             <Route path='*' element={
 
               <MyPage
-                data__profile={props.data__profile}
+                data__profile={props.state.MyPage.data__profile}
 
               /* MyPage_Posts */
-                data__MyPage_One_Post={props.data__MyPage_One_Post}
-                avatar={props.data__profile[0].avatar}
+                data__MyPage_One_Post={props.state.MyPage.data__MyPage_One_Post}
+                avatar={props.state.MyPage.data__profile[0].avatar}
               ></MyPage>
 
             }></Route>
             <Route path='/Messages/*' element={
 
               <Messages 
-                data__Dialog_List={props.data__Dialog_List} 
-                data__Message_List={props.data__Message_List} 
+                data__Dialog_List={props.state.Messages_page.data__Dialog_List} 
+                data__Message_List={props.state.Messages_page.data__Message_List} 
               ></Messages>
 
             }></Route>
