@@ -1,3 +1,5 @@
+import {post_render_entire_tree} from '../render';
+
 let state = {
   Messages_page:{
     data__Dialog_List: [
@@ -40,6 +42,15 @@ let state = {
       {id: 3, h1: 'Вітаннячко знову!', message: 'Це моє третє повідомлення в вкладці "Новини"'}
     ] 
   }
+};
+
+export let add_post = (post_message, post_id) => {
+  let new_post = {
+    id: post_id, message: post_message
+  }
+
+  state.MyPage.data__MyPage_One_Post.push(new_post);
+  post_render_entire_tree(state);
 };
 
 export default state;

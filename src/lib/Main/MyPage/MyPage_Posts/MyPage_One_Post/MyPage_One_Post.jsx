@@ -1,4 +1,5 @@
 import React from 'react';
+
 import css_clases from './MyPage_One_Post.module.css';
 
 const MyPage_One_Post = (props) => {
@@ -8,7 +9,7 @@ const MyPage_One_Post = (props) => {
         <img 
           src={props.avatar}
           ></img>
-        <button className={css_clases.like}>Like</button>
+        <button className={css_clases.like}>Delete</button>
       </div>
       <div className={css_clases.post_text}>
         {props.message}
