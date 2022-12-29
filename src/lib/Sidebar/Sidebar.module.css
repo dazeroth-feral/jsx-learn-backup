@@ -1,0 +1,19 @@
+/* Side Bar */
+.side_bar{
+  grid-area: side-bar;
+  background-color: dimgrey;
+  padding: 3px;
+}
+
+.side_bar a{
+  color: black;
+}
+
+.h1{
+  font-size: 24px;
+}
+
+.links{
+  padding: 8px;
+  padding-left: 16px;
+}

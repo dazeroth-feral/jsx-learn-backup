@@ -1,0 +1,10 @@
+/* Footer */
+footer{
+  grid-area: footer;
+  background-color: darkgray;
+}
+
+.author_name{
+  margin-top: 1.1em;
+  text-align: center;
+}

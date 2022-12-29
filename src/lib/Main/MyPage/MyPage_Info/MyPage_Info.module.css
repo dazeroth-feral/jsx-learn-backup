@@ -1,0 +1,30 @@
+/* MyPage_Info */
+
+.profile_content{
+  display: grid;
+  grid-template-areas: 
+  "avatar info_profile";
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 8px;
+}
+
+.profile_content a{
+  color: black;
+}
+
+.avatar_img{
+  width: 150px;
+  height: 180px;
+}
+
+.avatar{
+  grid-area: avatar;
+}
+
+.info_profile{
+  grid-area: info_profile;
+}
+
+.settings{
+  width: 150px;
+}

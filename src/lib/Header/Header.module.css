@@ -1,0 +1,21 @@
+/* Header */
+header{
+  grid-area: header;
+  background-color: darkgray;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  grid-template-areas: "img h1";
+}
+
+.img{
+  margin-left: 2.8em;
+  grid-area: img;
+  height: 64px;
+}
+
+.h1{
+  margin-top: 0.5em;
+  margin-left: -1.2em;
+  grid-area: h1;
+  font-size: 24px;
+}

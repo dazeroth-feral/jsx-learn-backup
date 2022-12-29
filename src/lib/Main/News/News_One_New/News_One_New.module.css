@@ -1,0 +1,18 @@
+.One_New_content{
+  border: 2px solid black;
+  margin-bottom: 1em;
+}
+
+.h1{
+  font-size: 24px;
+  margin-left: 4px;
+}
+
+.props_content{
+  margin-left: 1em;
+}
+
+.author{
+  margin-top: 0.3em;
+  font-size: 12px;
+}
