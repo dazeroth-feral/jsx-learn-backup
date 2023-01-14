@@ -19,7 +19,7 @@ const MyPage_Add_New_Post = (props) => {
     <div className={css_clases.add_post}>
 
       <textarea 
-        placeholder="Що в тебе на думіці?"
+        placeholder="Що в тебе на думці?"
 
         ref={text_posta} 
         onChange={textarea_Change} 
