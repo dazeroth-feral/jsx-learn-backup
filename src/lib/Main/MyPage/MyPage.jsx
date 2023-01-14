@@ -19,6 +19,9 @@ const MyPage = (props) => {
         avatar={props.avatar} 
         data__MyPage_One_Post={props.data__MyPage_One_Post}
         new_Post_Text={props.new_Post_Text}
+
+        add_New_Post={props.add_New_Post}
+        update_Post_Change={props.update_Post_Change}
       ></MyPage_Posts>
     </div>
   );

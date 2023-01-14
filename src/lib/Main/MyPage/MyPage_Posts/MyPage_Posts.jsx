@@ -13,6 +13,9 @@ const MyPage_Posts = (props) => {
       <div className={css_clases.form_for_add}>
         <MyPage_Add_New_Post
           new_Post_Text={props.new_Post_Text}
+
+          add_New_Post={props.add_New_Post}
+          update_Post_Change={props.update_Post_Change}
         ></MyPage_Add_New_Post>
       </div>
 

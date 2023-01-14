@@ -38,6 +38,9 @@ const App = (props) => {
                   data__MyPage_One_Post={props.state.MyPage.data__MyPage_One_Post}
                   avatar={props.state.MyPage.data__profile[0].avatar}
                   new_Post_Text={props.state.MyPage.new_Post_Text}
+
+                  add_New_Post={props.add_New_Post}
+                  update_Post_Change={props.update_Post_Change}
                 ></MyPage>
 
               }></Route>
