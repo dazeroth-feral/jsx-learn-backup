@@ -14,8 +14,7 @@ header{
 }
 
 .h1{
-  margin-top: 0.5em;
-  margin-left: -1.2em;
+  transform: translate(1em, 0.5em);
   grid-area: h1;
   font-size: 24px;
 }

@@ -15,39 +15,43 @@ import News from './lib/Main/News/News';
 const App = (props) => {
   return (
     <BrowserRouter>
+      <div className={css_clases.None}></div>
 
       <div className={css_clases.App}>
 
         <Header></Header>
         <Sidebar></Sidebar>
 
+        <main>
           <Routes>
-            <Route path='/News' element={
-              <News
-                data__One_New={props.state.News_page.data__One_New}
-              ></News>
-            }></Route>
-            <Route path='*' element={
+              <Route path='/News' element={
+                <News
+                  data__One_New={props.state.News_page.data__One_New}
+                ></News>
+              }></Route>
+              <Route path='*' element={
 
-              <MyPage
-                data__profile={props.state.MyPage.data__profile}
+                <MyPage
+                  data__profile={props.state.MyPage.data__profile}
 
-              /* MyPage_Posts */
-                data__MyPage_One_Post={props.state.MyPage.data__MyPage_One_Post}
-                avatar={props.state.MyPage.data__profile[0].avatar}
-              ></MyPage>
+                /* MyPage_Posts */
+                  data__MyPage_One_Post={props.state.MyPage.data__MyPage_One_Post}
+                  avatar={props.state.MyPage.data__profile[0].avatar}
+                  new_Post_Text={props.state.MyPage.new_Post_Text}
+                ></MyPage>
 
-            }></Route>
-            <Route path='/Messages/*' element={
+              }></Route>
+              <Route path='/Messages/*' element={
 
-              <Messages 
-                data__Dialog_List={props.state.Messages_page.data__Dialog_List} 
-                data__Message_List={props.state.Messages_page.data__Message_List} 
-              ></Messages>
+                <Messages 
+                  data__Dialog_List={props.state.Messages_page.data__Dialog_List} 
+                  data__Message_List={props.state.Messages_page.data__Message_List} 
+                ></Messages>
 
-            }></Route>
-            <Route path='/Settings' element={<Settings></Settings>}></Route>
+              }></Route>
+              <Route path='/Settings' element={<Settings></Settings>}></Route>
           </Routes>
+        </main>
         
         <Footer className={css_clases.footer}></Footer>
 

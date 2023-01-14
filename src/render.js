@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-export let post_render_entire_tree = (state) => {
-  const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+export let post_render_entire_tree = (state) => { 
   root.render(
     <React.StrictMode>
       <App state={state} />

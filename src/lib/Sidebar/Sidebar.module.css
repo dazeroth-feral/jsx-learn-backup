@@ -1,6 +1,6 @@
 /* Side Bar */
 .side_bar{
-  grid-area: side-bar;
+  grid-area: side_bar;
   background-color: dimgrey;
   padding: 3px;
 }

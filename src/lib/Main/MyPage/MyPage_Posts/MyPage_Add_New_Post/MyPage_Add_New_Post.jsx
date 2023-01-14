@@ -1,26 +1,32 @@
 import React from 'react';
-import {add_post} from '../../../../../redux/state';
+import {add_post, update_Post_Change} from '../../../../../redux/state';
 
 import css_clases from './MyPage_Add_New_Post.module.css';
 
-const MyPage_Add_New_Post = () => {
+const MyPage_Add_New_Post = (props) => {
   let text_posta = React.createRef();
 
   let add_Post = () => {
-    let text = text_posta.current.value;
-    if(!text == ''){
-      add_post(text, 5);
-    }
-  };
+    add_post()
+  }
+
+  let textarea_Change = () => {
+    let text = text_posta.current.value
+    update_Post_Change(text)
+  }
 
   return(
     <div className={css_clases.add_post}>
 
-    <textarea ref={text_posta} className={css_clases.textarea}></textarea>
+      <textarea 
+        placeholder="Що в тебе на думіці?"
 
-    <br></br>
-
-    <button onClick={add_Post} className={css_clases.button}>Add Post</button>
+        ref={text_posta} 
+        onChange={textarea_Change} 
+        className={css_clases.Textarea} 
+        value={props.new_Post_Text}
+      />
+      <button onClick={add_Post} className={css_clases.Button}>Add Post</button>
 
   </div>
   )

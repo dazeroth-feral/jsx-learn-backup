@@ -31,7 +31,9 @@ let state = {
     data__MyPage_One_Post: [
       {id: 1, message: 'Вітання козаче, присядь та випий склянку горілки.'},
       {id: 2, message: 'Вітання козаче.'}
-    ]
+    ],
+
+    new_Post_Text: ''
   },
 
   News_page: {
@@ -44,13 +46,25 @@ let state = {
   }
 };
 
-export let add_post = (post_message, post_id) => {
-  let new_post = {
-    id: post_id, message: post_message
+export let add_post = () => {
+  let last__post_id = state.MyPage.data__MyPage_One_Post[state.MyPage.data__MyPage_One_Post.length - 1].id // ПРи підключенні БД можна організувати адекватне позначення айдішника, а не ця вся хуйня з не оновлюючимися масивами! >:C
+
+  let new_post = { // завдання значень для нового елементу в масиві
+    id: last__post_id = 1, message: state.MyPage.new_Post_Text
   }
 
-  state.MyPage.data__MyPage_One_Post.push(new_post);
-  post_render_entire_tree(state);
+  if(!new_post.message == ''){ // перевірка на пусте поле
+    state.MyPage.data__MyPage_One_Post.push(new_post); // якщо строка не пуста, то елемент відправляється в масив
+  }
+  state.MyPage.new_Post_Text = '' // обнулення строни до початкового стану
+  post_render_entire_tree(state) // ререндеринг контенту сторінки
 };
+
+export let update_Post_Change = (change_Word) => {
+  state.MyPage.new_Post_Text = change_Word // із атрибутів задання нового значенню елементу в масиві
+  post_render_entire_tree(state) // ререндеринг контенту сторінки
+};
+
+window.state = state // надання доступу до перегляду масиву в вікні консолі сайту
 
 export default state;

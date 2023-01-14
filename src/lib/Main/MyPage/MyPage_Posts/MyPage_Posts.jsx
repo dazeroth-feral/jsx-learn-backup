@@ -11,10 +11,12 @@ const MyPage_Posts = (props) => {
     <div className={css_clases.content}>
 
       <div className={css_clases.form_for_add}>
-        <MyPage_Add_New_Post></MyPage_Add_New_Post>
+        <MyPage_Add_New_Post
+          new_Post_Text={props.new_Post_Text}
+        ></MyPage_Add_New_Post>
       </div>
 
-      <hr></hr>      
+      <hr className={css_clases.Mini_Hr}></hr>      
 
       <div className={css_clases.posts}>
         {el__MyPage_One_Post}
