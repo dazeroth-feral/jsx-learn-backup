@@ -1,5 +1,4 @@
-import {post_render_entire_tree} from '../render';
-
+//import {post_render_entire_tree} from '../render';
 let state = {
   Messages_page:{
     data__Dialog_List: [
@@ -46,6 +45,14 @@ let state = {
   }
 };
 
+let render_Entire_Tree = () => {
+  console.log('tested')
+}
+
+export let subscribe = (observer) => {
+  render_Entire_Tree = observer
+}
+
 export let add_post = () => {
   let last__post_id = state.MyPage.data__MyPage_One_Post[state.MyPage.data__MyPage_One_Post.length - 1].id // ПРи підключенні БД можна організувати адекватне позначення айдішника, а не ця вся хуйня з не оновлюючимися масивами! >:C
 
@@ -57,12 +64,12 @@ export let add_post = () => {
     state.MyPage.data__MyPage_One_Post.push(new_post); // якщо строка не пуста, то елемент відправляється в масив
   }
   state.MyPage.new_Post_Text = '' // обнулення строни до початкового стану
-  post_render_entire_tree(state) // ререндеринг контенту сторінки
+  render_Entire_Tree(state) // ререндеринг контенту сторінки
 };
 
 export let update_Post_Change = (change_Word) => {
   state.MyPage.new_Post_Text = change_Word // із атрибутів задання нового значенню елементу в масиві
-  post_render_entire_tree(state) // ререндеринг контенту сторінки
+  render_Entire_Tree(state) // ререндеринг контенту сторінки
 };
 
 window.state = state // надання доступу до перегляду масиву в вікні консолі сайту
