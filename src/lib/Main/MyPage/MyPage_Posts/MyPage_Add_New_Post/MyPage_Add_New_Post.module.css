@@ -1,11 +1,10 @@
 .Textarea{
-  width:75%;
+  width:99.3%;
   height: 3em;
   resize: none;
 }
 
 .Button{
   display: inline-block;
-  height: 3em;
-  transform: translate(10%, -1.4em);
+  transform: translate(0, em);
 }

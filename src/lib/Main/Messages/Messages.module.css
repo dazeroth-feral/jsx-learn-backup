@@ -1,14 +1,43 @@
-.Messages__content{
-  display: grid;
-  grid-template-columns: 3fr 9fr;
-  grid-template-areas: "dialogs messages";
-  grid-gap: 8px;
+.content_Page {
+	display: grid;
+	grid-template-rows: auto 90px;
+	grid-template-areas:
+		"Messages__content"
+		"sender_Messages";
+	min-height: 75vh;
+	grid-gap: 8px;
 }
 
-.dialog_list{
-  grid-area: dialogs;
+.Messages__content {
+	grid-area: Messages__content;
+	display: grid;
+	grid-template-columns: 3fr 9fr;
+	grid-template-areas: "dialogs messages";
+	grid-gap: 8px;
 }
 
-.messages{
-  grid: messages;
+.block_Send_Message {
+	grid-area: sender_Messages;
+	padding-bottom: 6.8em;
+}
+
+.Dialog_List {
+	grid-area: dialogs;
+	padding: 8px;
+}
+
+.Dialog_Page__content {
+	grid: messages;
+	transform: translate(0, 2.5em);
+}
+
+.textarea_From_New_Message {
+	height: 5.8em;
+	width: 99.3%;
+}
+
+.enter_Your_Dialog {
+	margin: 0;
+	padding-bottom: 10px;
+	transform: translate(0, 1px);
 }
