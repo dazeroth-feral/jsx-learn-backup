@@ -40,6 +40,7 @@ const MyPage__reducer = (state = initialState, action) => {
 		case UPDATE__MY_PAGE__TEXTAREA_CHANGE:
 			state.MyPage__new_Text_in_Textarea = action.change_Word; // із атрибутів задання нового значенню елементу в масиві
 			break;
+
 		default:
 			return state;
 	}

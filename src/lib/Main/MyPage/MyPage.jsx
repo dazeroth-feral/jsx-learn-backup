@@ -9,16 +9,16 @@ const MyPage = (props) => {
 	return (
 		<div>
 			<MyPage_Info
-				avatar={props.data__profile[0].avatar}
-				name={props.data__profile[0].name}
-				old={props.data__profile[0].old}
-				was_born_in={props.data__profile[0].was_born_in}
+				avatar={props.data__profile.avatar}
+				name={props.data__profile.name}
+				old={props.data__profile.old}
+				was_born_in={props.data__profile.was_born_in}
 			></MyPage_Info>
 
 			<hr></hr>
 
 			<MyPage_Posts_Container
-				avatar={props.avatar}
+				avatar={props.data__profile.avatar}
 				data__MyPage_One_Post={props.data__MyPage_One_Post}
 				new_Text_in_Textarea={props.new_Text_in_Textarea}
 				dispatch={props.dispatch}

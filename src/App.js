@@ -38,15 +38,11 @@ const App = (props) => {
 							element={
 								<MyPage
 									data__profile={
-										props.state.MyPage.data__profile
+										props.state.MyPage.data__profile[0]
 									}
 									/* MyPage_Posts */
 									data__MyPage_One_Post={
 										props.state.MyPage.data__MyPage_One_Post
-									}
-									avatar={
-										props.state.MyPage.data__profile[0]
-											.avatar
 									}
 									new_Text_in_Textarea={
 										props.state.MyPage

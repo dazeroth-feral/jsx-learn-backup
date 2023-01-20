@@ -1,20 +1,19 @@
 /* Header */
-header{
-  grid-area: header;
-  background-color: darkgray;
-  display: grid;
-  grid-template-columns: 2fr 8fr;
-  grid-template-areas: "img h1";
+header {
+	grid-area: header;
+	background-color: darkgray;
+	display: grid;
+	grid-template-columns: 1.8fr 8.2fr;
+	grid-template-areas: "img h1";
 }
 
-.img{
-  margin-left: 2.8em;
-  grid-area: img;
-  height: 64px;
+.img {
+	margin: 0 auto;
+	grid-area: img;
+	height: 12%;
 }
 
-.h1{
-  transform: translate(1em, 0.5em);
-  grid-area: h1;
-  font-size: 24px;
+.h1 {
+	grid-area: h1;
+	font-size: 38px;
 }

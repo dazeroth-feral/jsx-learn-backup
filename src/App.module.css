@@ -1,23 +1,25 @@
-body{
-  background-color: gray;
+body {
+	background-color: gray;
 }
 
-.App{
-  display: grid;
-  grid-template-rows: 60px auto 60px;
-  grid-template-columns: 8% 2fr 10fr 8%;
-  grid-template-areas: 
-  "none header header"
-  "none side_bar main"
-  "none footer footer";
-  grid-gap: 8px;
-  min-height: 100vh;
+.App {
+	display: grid;
+	grid-template-rows: 60px auto 60px;
+	grid-template-columns: 8% 2fr 10fr 8%;
+	grid-template-areas:
+		"none header header"
+		"none side_bar main"
+		"none footer footer";
+	grid-gap: 8px;
+	min-height: 100vh;
 }
 
-main{
-  grid-area: main;
+main {
+	padding: 9px;
+	grid-area: main;
+	background-color: dimgrey;
 }
 
-.None{
-  grid-area: none;
+.None {
+	grid-area: none;
 }

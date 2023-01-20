@@ -1,8 +1,4 @@
 import React from "react";
-import {
-	add_New_Post__Action_Creator,
-	textarea__MyPage__Change__Action_Creator,
-} from "../../../../../redux/reducers/MyPage-reducer";
 
 import css_clases from "./MyPage_Add_New_Post.module.css";
 
