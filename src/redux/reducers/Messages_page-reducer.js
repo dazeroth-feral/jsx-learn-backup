@@ -2,7 +2,23 @@ const ADD_NEW_MESSAGE = "ADD-NEW-MESSAGE";
 const UPDATE__MESSAGES_PAGE__TEXTAREA_CHANGE =
 	"UPDATE-MESSAGES_PAGE-TEXTAREA-CHANGE";
 
-const Messages_page__reducer = (state, action) => {
+let initialState = {
+	data__Dialog_List: [
+		{ id: 1, name: "Gleb Super" },
+		{ id: 2, name: "Ne Gleb" },
+		{ id: 3, name: "Sveta" },
+	],
+
+	data__Message_List: [
+		{ id: 2, message: "Hello, i`m Ne Gleb Super" },
+		{ id: 1, message: "Hello, i`m Gleb" },
+		{ id: 3, message: "I`m Sveta, fuck you boy!" },
+	],
+
+	Messages_page__new_Text_in_Textarea: "",
+};
+
+const Messages_page__reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_NEW_MESSAGE:
 			let new_Message = {

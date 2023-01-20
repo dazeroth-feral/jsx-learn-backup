@@ -1,7 +1,30 @@
 const ADD_NEW_POST = "ADD-NEW-POST";
 const UPDATE__MY_PAGE__TEXTAREA_CHANGE = "UPDATE-MY_PAGE-TEXTAREA-CHANGE";
 
-const MyPage__reducer = (state, action) => {
+let initialState = {
+	// MyPage
+	data__profile: [
+		{
+			avatar: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/SBandera.jpg/274px-SBandera.jpg",
+			name: "Stepan Bandera",
+			old: 63,
+			was_born_in: "vil. Staryj Yhryniv",
+		},
+	],
+
+	// MyPage_One_Post
+	data__MyPage_One_Post: [
+		{
+			id: 1,
+			message: "Вітання козаче, присядь та випий склянку горілки.",
+		},
+		{ id: 2, message: "Вітання козаче." },
+	],
+
+	MyPage__new_Text_in_Textarea: "",
+};
+
+const MyPage__reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case ADD_NEW_POST:
 			let new_post = {

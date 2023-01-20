@@ -10,12 +10,12 @@ const MyPage_Add_New_Post = (props) => {
 	let text_posta = React.createRef();
 
 	let add_New_Post = () => {
-		props.dispatch(add_New_Post__Action_Creator());
+		props.add_New_Post();
 	};
 
 	let textarea_Change = () => {
 		let text = text_posta.current.value;
-		props.dispatch(textarea__MyPage__Change__Action_Creator(text));
+		props.textarea_Change(text);
 	};
 
 	return (

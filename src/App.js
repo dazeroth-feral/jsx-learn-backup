@@ -7,7 +7,7 @@ import Footer from "./lib/Footer/Footer";
 import Header from "./lib/Header/Header";
 import Sidebar from "./lib/Sidebar/Sidebar";
 
-import Messages from "./lib/Main/Messages/Messages";
+import Messages_Container from "./lib/Main/Messages/Messages_Container";
 import MyPage from "./lib/Main/MyPage/MyPage";
 import Settings from "./lib/Main/MyPage/Settings/Settings";
 import News from "./lib/Main/News/News";
@@ -59,7 +59,7 @@ const App = (props) => {
 						<Route
 							path="/Messages"
 							element={
-								<Messages
+								<Messages_Container
 									data__Dialog_List={
 										props.state.Messages_page
 											.data__Dialog_List
@@ -73,7 +73,7 @@ const App = (props) => {
 											.Messages_page__new_Text_in_Textarea
 									}
 									dispatch={props.dispatch}
-								></Messages>
+								></Messages_Container>
 							}
 						></Route>
 						<Route
